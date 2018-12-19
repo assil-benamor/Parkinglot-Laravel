@@ -3,13 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use  Illuminate\Support\Facades\App;
 
 class Vehicle extends Model
 {
     protected $table = 'vehicles';
     protected $writeTable = 'vehicles';
     protected $readTable = 'vehicles';
-	
+    
+
 	protected function setWriteTable($table) {
         
         $this->writeTable = $table;
@@ -50,5 +52,10 @@ class Vehicle extends Model
         $this->toReadMode();
 
         return $saved;
+    }
+
+    public function OccupiedSlot()
+    {
+        return $this->hasOne('App\OccupiedSlot');
     }
 }

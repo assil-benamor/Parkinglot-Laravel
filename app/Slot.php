@@ -10,4 +10,10 @@ class Slot extends Model
     {
         return $this->belongsTo(Parkinglot::class);
     }
+
+    
+    public function OccupiedSlot()
+    {
+        return $this->hasOne('App\OccupiedSlot');
+    }
 }
