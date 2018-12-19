@@ -29,7 +29,17 @@ class Parkinglot extends Model
             $v->isParked = 1 ;
             $s->save();
             $v->save();
-
         } 
+    }
+    public function leaveVehicle(Vehicle $v) {
+       
+           
+            $occSlot = OccupiedSlot::where('vehicle_id' ,$v->id)->first();
+            $s = $this->slots()->where('id' ,$occSlot->slot_id )->first() ;
+            $occSlot->delete();
+            $s->available = 1 ;
+            $v->isParked = 0 ;
+            $s->save();
+            $v->save();
     }
 }
