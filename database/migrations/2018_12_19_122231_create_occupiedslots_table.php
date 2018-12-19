@@ -15,6 +15,10 @@ class CreateOccupiedslotsTable extends Migration
     {
         Schema::create('occupiedslots', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('slot_id')->unsigned()->index()->nullable();
+            $table->foreign('slot_id')->references('id')->on('slot');
+            $table->integer('vehicle_id')->unsigned()->index()->nullable();
+            $table->foreign('vehicle_id')->references('id')->on('vehicles');
             $table->timestamps();
         });
     }
