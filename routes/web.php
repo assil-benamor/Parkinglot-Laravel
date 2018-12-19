@@ -1,5 +1,5 @@
 <?php
-
+use App\OccupiedSlot;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/occslot/getall', function(){
+    $oc = new OccupiedSlot();
+    return $oc->getStatus();
 });
