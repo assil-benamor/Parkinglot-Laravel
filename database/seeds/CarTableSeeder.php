@@ -17,7 +17,7 @@ class CarTableSeeder extends Seeder
         DB::table('vehicles')->insert([
             'size' => $faker->numberBetween($min = 1, $max = 3),
             'lisense' => str_random(10),
-            'color' => str_random(10),
+            'color' => $faker->randomElement(['Blue', 'Red' , 'Black' , 'White' ]),
             'isParked' => false,
             'created_at' =>  Carbon::now()->format('Y-m-d H:i:s') ,
             'updated_at'  => Carbon::now()->format('Y-m-d H:i:s') ,

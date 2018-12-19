@@ -11,8 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
          $this->call(ParkinglotTableSeeder::class);
-         $this->call(SlotTableSeeder::class);
+         
+         for($i = 1;$i<=10;$i++)
+         {
          $this->call(CarTableSeeder::class);
+         }
     }
 }
