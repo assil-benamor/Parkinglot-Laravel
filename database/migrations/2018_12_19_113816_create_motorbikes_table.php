@@ -15,7 +15,9 @@ class CreateMotorbikesTable extends Migration
     {
         DB::statement("CREATE VIEW motorbikes AS
         SELECT *
-        FROM vehicles ");
+        FROM vehicles 
+        WHERE size = 1
+        ");
     }
 
     /**

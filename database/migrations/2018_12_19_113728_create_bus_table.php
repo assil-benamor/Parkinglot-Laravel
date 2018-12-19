@@ -15,7 +15,8 @@ class CreateBusTable extends Migration
     {
         DB::statement("CREATE VIEW bus AS
                         SELECT *
-                        FROM vehicles ");
+                        FROM vehicles
+                        WHERE size = 3  ");
     }
 
     /**

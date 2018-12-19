@@ -15,7 +15,9 @@ class CreateCarsTable extends Migration
     {
         DB::statement("CREATE VIEW cars AS
                         SELECT *
-                        FROM vehicles ");
+                        FROM vehicles 
+                        WHERE size = 2 
+                        ");
     }
     
 
