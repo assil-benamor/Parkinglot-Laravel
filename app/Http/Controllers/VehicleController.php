@@ -26,6 +26,10 @@ class VehicleController extends Controller
                 return response()->json([
                     'Park status' => 'Vehicle parked successfully' 
                 ]);
+            } else {
+                return response()->json([
+                    'Park status' => 'The parking lot is full' 
+                ]);
             }
         }
         else {
