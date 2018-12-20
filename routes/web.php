@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/occslot/getall', function(){
-    $oc = new OccupiedSlot();
-    return $oc->getStatus();
-});
+Route::get('/parkinglot/getstatus', 'ParkinglotController@getStatus');
+Route::get('/vehicle/park/{lisense}', 'VehicleController@parkVehicle');
+Route::get('/vehicle/leave/{lisense}', 'VehicleController@leaveVehicle');
+Route::get('/vehicle/getall', 'VehicleController@getAllVehicles');
+

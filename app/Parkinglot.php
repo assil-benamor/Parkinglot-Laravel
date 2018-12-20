@@ -23,13 +23,19 @@ class Parkinglot extends Model
             $s = $this->slots()->where('size' ,$v->size )->where('available', 1)->first() ;
             OccupiedSlot::create([
                 'slot_id' => $s->id ,
-                'vehicle_id' => $v->id
+                'vehicle_id' => $v->id,
+                'vehicle_lisense' => $v->lisense ,
+                'size' => $v->size
             ]);
             $s->available = 0 ;
             $v->isParked = 1 ;
             $s->save();
             $v->save();
+            return true ;
         } 
+        else {
+            return false ;
+        }
     }
     public function leaveVehicle(Vehicle $v) {
        

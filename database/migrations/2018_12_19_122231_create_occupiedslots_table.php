@@ -19,6 +19,8 @@ class CreateOccupiedslotsTable extends Migration
             $table->foreign('slot_id')->references('id')->on('slot');
             $table->integer('vehicle_id')->unsigned()->index()->nullable();
             $table->foreign('vehicle_id')->references('id')->on('vehicles');
+            $table->integer('size');
+            $table->string('vehicle_lisense');
             $table->timestamps();
         });
     }
