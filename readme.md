@@ -5,16 +5,16 @@ Parking lot management system is a backend application that aims to manages vehi
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-PHP between 5.6.4 & 7.1.*
-OpenSSL PHP Extension
-PDO PHP Extension
-Mbstring PHP Extension
-Tokenizer PHP Extension
-XML PHP Extension
+PHP between 5.6.4 & 7.1.*  
+OpenSSL PHP Extension  
+PDO PHP Extension  
+Mbstring PHP Extension  
+Tokenizer PHP Extension  
+XML PHP Extension  
 
 ### Installing
 
