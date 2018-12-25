@@ -96,7 +96,7 @@ http://parkinglot.tk/parkinglot/getstatus gives us
 
 ![alt text](https://imgur.com/1ZMt5rq.png)
 
-and finally we can unpark the car using http://parkinglot.tk/vehicle/unpark/lP8p7DcJbB to get 
+and finally we can unpark the car using http://parkinglot.tk/vehicle/leave/lP8p7DcJbB to get 
 
 ![alt text](https://imgur.com/3d8ozNo.png)
 
